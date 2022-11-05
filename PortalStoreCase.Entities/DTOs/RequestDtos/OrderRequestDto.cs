@@ -9,9 +9,7 @@ namespace PortalStoreCase.Entities.DTOs.RequestDtos
     public class OrderRequestDto
     {
         public int CustomerId { get; set; }
-
         public int AddressId { get; set; }
-
         public decimal TotalPrice { get; set; }
     }
 }

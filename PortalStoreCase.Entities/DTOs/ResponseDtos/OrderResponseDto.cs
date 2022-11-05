@@ -9,11 +9,8 @@ namespace PortalStoreCase.Entities.DTOs.ResponseDtos
     public class OrderResponseDto
     {
         public int Id { get; set; }
-
         public string Customer { get; set; }
-
         public string Address { get; set; }
-
         public decimal TotalPrice { get; set; }
     }
 }

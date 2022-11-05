@@ -37,6 +37,5 @@ namespace PortalStoreCase.WebAPI.Controllers
             await _customerService.ChangeRecordStatusAsync(id);
             return Ok();
         }
-
     }
 }

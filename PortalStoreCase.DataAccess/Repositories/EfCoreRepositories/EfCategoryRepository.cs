@@ -1,7 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using PortalStoreCase.DataAccess.Data;
 using PortalStoreCase.DataAccess.Repositories.GenericRepositories;
 using PortalStoreCase.DataAccess.Repositories.IRepositories;
+using PortalStoreCase.Entities.DTOs.ResponseDtos;
 using PortalStoreCase.Entities.Entities;
 using System;
 using System.Collections.Generic;
@@ -13,14 +15,17 @@ namespace PortalStoreCase.DataAccess.Repositories.EfCoreRepositories
 {
     public class EfCategoryRepository : GenericRepository<Category>, ICategoryRepository
     {
-        public EfCategoryRepository(PortalDbContext context) : base(context)
+        private readonly IMapper _mapper;
+        public EfCategoryRepository(PortalDbContext context, IMapper mapper) : base(context)
         {
+            _mapper = mapper;
         }
 
-        public async Task<List<Category>> GetAllActiveCategoryAsync()
+        public async Task<List<CategoryResponseDto>> GetAllActiveCategoryAsync()
         {
             var listCategory = await _context.Categories.Where(x => x.Status == true).ToListAsync();
-            return listCategory;
+            var listResponseDto = _mapper.Map<List<CategoryResponseDto>>(listCategory);
+            return listResponseDto;
         }
 
         public async Task<List<SKU>> GetSingleCategoryByIdWithSkusAsync(int categoryId)

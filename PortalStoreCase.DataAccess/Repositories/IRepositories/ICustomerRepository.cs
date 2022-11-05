@@ -1,4 +1,5 @@
-﻿using PortalStoreCase.Entities.Entities;
+﻿using PortalStoreCase.Entities.DTOs.RequestDtos;
+using PortalStoreCase.Entities.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

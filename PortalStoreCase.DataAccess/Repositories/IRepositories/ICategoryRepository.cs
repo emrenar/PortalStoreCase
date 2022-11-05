@@ -10,7 +10,7 @@ namespace PortalStoreCase.DataAccess.Repositories.IRepositories
 {
     public interface ICategoryRepository : IRepository<Category>
     {
-        Task<List<Category>> GetAllActiveCategoryAsync();
+        Task<List<CategoryResponseDto>> GetAllActiveCategoryAsync();
         Task<List<SKU>> GetSingleCategoryByIdWithSkusAsync(int categoryId);
     }
 }

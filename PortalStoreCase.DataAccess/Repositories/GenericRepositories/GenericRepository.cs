@@ -31,7 +31,7 @@ namespace PortalStoreCase.DataAccess.Repositories.GenericRepositories
             _dbSet.Remove(existing);
         }
 
-        public async Task<IList<T>> GetAllAsync()
+        public async Task<List<T>> GetAllAsync()
         {
             return await _dbSet.ToListAsync();
         }

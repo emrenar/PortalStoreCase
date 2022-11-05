@@ -9,9 +9,7 @@ namespace PortalStoreCase.Entities.Entities
     public abstract  class BaseEntity
     {
         public int Id { get; set; }
-
         public bool Status { get; set; } = true;
-
         public DateTime CreationDate { get; set; } = DateTime.Now;
     }
 }

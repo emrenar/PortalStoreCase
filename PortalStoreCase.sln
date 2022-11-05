@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortalStoreCase.WebAPI", "PortalStoreCase.WebAPI\PortalStoreCase.WebAPI.csproj", "{944C251C-EE11-4C32-B74F-D6E88B19FFDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortalStoreCase.WebAPI", "PortalStoreCase.WebAPI\PortalStoreCase.WebAPI.csproj", "{944C251C-EE11-4C32-B74F-D6E88B19FFDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortalStoreCase.Business", "PortalStoreCase.Business\PortalStoreCase.Business.csproj", "{3CB97EFB-1AAC-4A6F-B6E6-A5696F0E865F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortalStoreCase.Business", "PortalStoreCase.Business\PortalStoreCase.Business.csproj", "{3CB97EFB-1AAC-4A6F-B6E6-A5696F0E865F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortalStoreCase.DataAccess", "PortalStoreCase.DataAccess\PortalStoreCase.DataAccess.csproj", "{36774370-A17E-48EC-A2A7-D2FDC9CF88FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortalStoreCase.DataAccess", "PortalStoreCase.DataAccess\PortalStoreCase.DataAccess.csproj", "{36774370-A17E-48EC-A2A7-D2FDC9CF88FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortalStoreCase.Entities", "PortalStoreCase.Entities\PortalStoreCase.Entities.csproj", "{C0C0B08A-D368-41A0-812F-B6D1DDBF2972}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortalStoreCase.Entities", "PortalStoreCase.Entities\PortalStoreCase.Entities.csproj", "{C0C0B08A-D368-41A0-812F-B6D1DDBF2972}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PortalStoreCase.Tests", "PortalStoreCase.Business.Tests\PortalStoreCase.Tests.csproj", "{E3152051-55A2-46D5-8074-ADFD4D6E11A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C0C0B08A-D368-41A0-812F-B6D1DDBF2972}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0C0B08A-D368-41A0-812F-B6D1DDBF2972}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0C0B08A-D368-41A0-812F-B6D1DDBF2972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3152051-55A2-46D5-8074-ADFD4D6E11A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3152051-55A2-46D5-8074-ADFD4D6E11A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3152051-55A2-46D5-8074-ADFD4D6E11A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3152051-55A2-46D5-8074-ADFD4D6E11A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

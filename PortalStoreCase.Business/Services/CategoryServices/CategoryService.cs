@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FluentValidation;
 using PortalStoreCase.DataAccess.Repositories.IRepositories;
 using PortalStoreCase.Entities.DTOs.RequestDtos;
 using PortalStoreCase.Entities.DTOs.ResponseDtos;
@@ -39,13 +40,12 @@ namespace PortalStoreCase.Business.Services.CategoryServices
         public async Task<List<CategoryResponseDto>> GetAllActiveCategoryAsync()
         {
             var categories = await _repository.GetAllActiveCategoryAsync();
-            var categoriesListResponse = _mapper.Map<List<CategoryResponseDto>>(categories);
-            return categoriesListResponse;
+            return categories;
         }
 
         public async Task<List<CategoryResponseDto>> GetAllCategories()
         {
-            var categories =await _repository.GetAllAsync();
+            var categories = await _repository.GetAllAsync();
             var categoryResponse = _mapper.Map<List<CategoryResponseDto>>(categories);
             return categoryResponse;
         }
@@ -53,9 +53,7 @@ namespace PortalStoreCase.Business.Services.CategoryServices
         public async Task<List<SkuResponseDto>> GetSingleCategoryByIdWithSkusService(int categoryId)
         {
             var listSku = await _repository.GetSingleCategoryByIdWithSkusAsync(categoryId);
-
             var listSkuDto = _mapper.Map<List<SkuResponseDto>>(listSku);
-
             return listSkuDto;
         }
     }

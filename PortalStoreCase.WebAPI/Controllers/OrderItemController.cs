@@ -23,12 +23,14 @@ namespace PortalStoreCase.WebAPI.Controllers
             var orderItems = await _service.GetAllActiveOrderItemsAsync();
             return Ok(orderItems);
         }
+
         [HttpPut("[action]")]
         public async Task<IActionResult> RemoveOrderItemFromList(int id)
         {
             await _service.ChangeRecordStatusAsync(id);
             return Ok();
         }
+
         [HttpPost("[action]")]
         public async Task<IActionResult> AddOrderItem(OrderItemRequestDto orderItemRequestDto)
         {

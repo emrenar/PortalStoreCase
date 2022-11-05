@@ -31,9 +31,9 @@ namespace PortalStoreCase.WebAPI.Controllers
         }
 
         [HttpPost("[action]")]
-        public async Task<IActionResult> AddNewAddress(AddressRequestDto addressRequestDto)
+        public async Task<IActionResult> AddNewAddress(AddressPostDto addressPostDto)
         {
-            await _service.AddAddressAsync(addressRequestDto);
+            await _service.AddAddressAsync(addressPostDto);
             return Ok();
         }
 
@@ -43,6 +43,5 @@ namespace PortalStoreCase.WebAPI.Controllers
             await _service.ChangeAddressAsync(addressRequestDto);
             return Ok();
         }
-
     }
 }

@@ -46,10 +46,10 @@ namespace PortalStoreCase.Business.Services.CustomerServices
             }
         }
 
-        public async Task<IList<CustomerResponseDto>> GetAllActiveCustomersAsync()
+        public async Task<List<CustomerResponseDto>> GetAllActiveCustomersAsync()
         {
             var customers = await _repository.GetAllActiveCustomerAsync();
-            var customersListResponse = _mapper.Map<IList<CustomerResponseDto>>(customers);
+            var customersListResponse = _mapper.Map<List<CustomerResponseDto>>(customers);
             return customersListResponse;
         }
 
@@ -59,6 +59,5 @@ namespace PortalStoreCase.Business.Services.CustomerServices
             customerInfo.Status = false;
             _repository.SaveAsync();
         }
-
     }
 }

@@ -13,7 +13,6 @@ namespace PortalStoreCase.Business.Services.SkuServices
 {
     public class SkuService : ISkuService
     {
-
         private readonly ISkuRepository _repository;
         private readonly IMapper _mapper;
 
@@ -26,16 +25,14 @@ namespace PortalStoreCase.Business.Services.SkuServices
         public async Task ChangeRecordStatusAsync(int id)
         {
             var sku = await _repository.GetEntityByIdAsync(id);
-                sku.Status = false;
-                _repository.SaveAsync();
-           
-            
+            sku.Status = false;
+            _repository.SaveAsync();
         }
 
-        public async Task<IList<SkuResponseDto>> GetAllActiveSkuAsync()
+        public async Task<List<SkuResponseDto>> GetAllActiveSkuAsync()
         {
             var skuList = await _repository.GetAllActiveSkuAsync();
-            var skuDto =  _mapper.Map<IList<SkuResponseDto>>(skuList);
+            var skuDto = _mapper.Map<List<SkuResponseDto>>(skuList);
             return skuDto;
         }
 
@@ -45,8 +42,5 @@ namespace PortalStoreCase.Business.Services.SkuServices
             _repository.Add(sku);
             _repository.Save();
         }
-
-       
-
     }
 }

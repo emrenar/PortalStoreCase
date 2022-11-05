@@ -16,7 +16,6 @@ namespace PortalStoreCase.Business.Services.OrderItemServices
         private readonly IOrderItemRepository _repository;
         private readonly IMapper _mapper;
 
-
         public OrderItemService(IOrderItemRepository repository, IMapper mapper)
         {
             _repository = repository;

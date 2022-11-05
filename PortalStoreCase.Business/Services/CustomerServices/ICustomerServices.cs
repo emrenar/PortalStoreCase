@@ -11,7 +11,7 @@ namespace PortalStoreCase.Business.Services.CustomerServices
 {
     public interface ICustomerServices
     {
-        Task<IList<CustomerResponseDto>> GetAllActiveCustomersAsync();
+        Task<List<CustomerResponseDto>> GetAllActiveCustomersAsync();
         void CreateCustomer(CustomerRequestDto customerRequest);
         Task ChangeRecordStatusAsync(int id);
     }

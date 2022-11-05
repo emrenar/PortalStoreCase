@@ -9,7 +9,7 @@ namespace PortalStoreCase.DataAccess.Repositories.IRepositories
 {
     public interface IRepository<T> where T : class
     {
-        Task<IList<T>> GetAllAsync();
+        Task<List<T>> GetAllAsync();
         Task<T> GetEntityByIdAsync(int id);
         void Remove(int id);
         void Add(T entity);

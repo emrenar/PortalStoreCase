@@ -10,7 +10,7 @@ namespace PortalStoreCase.Business.Services.SkuServices
 {
     public interface ISkuService
     {
-        Task<IList<SkuResponseDto>> GetAllActiveSkuAsync();
+        Task<List<SkuResponseDto>> GetAllActiveSkuAsync();
         Task ChangeRecordStatusAsync(int id);
         Task AddSkuAsync(SkuRequestDto skuRequest);
     }

@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace PortalStoreCase.Entities.DTOs.RequestDtos
 {
-    public class AddressRequestDto
+    public class AddressPostDto
     {
-        public int Id { get; set; }
         public string AddressLine { get; set; }
         public string Country { get; set; }
         public string City { get; set; }

@@ -22,9 +22,9 @@ namespace PortalStoreCase.Business.Services.AddressServices
             _repository = repository;
         }
 
-        public async Task AddAddressAsync(AddressRequestDto addressRequestDto)
+        public async Task AddAddressAsync(AddressPostDto addressPostDto)
         {
-            var address = _mapper.Map<Address>(addressRequestDto);
+            var address = _mapper.Map<Address>(addressPostDto);
             _repository.Add(address);
             _repository.SaveAsync();
         }
@@ -43,10 +43,10 @@ namespace PortalStoreCase.Business.Services.AddressServices
             _repository.SaveAsync();
         }
 
-        public async Task<IList<AddressResponseDto>> GetAllActiveAddressesAsync()
+        public async Task<List<AddressResponseDto>> GetAllActiveAddressesAsync()
         {
             var addresses = await _repository.GetAllActiveAddressAsync();
-            var addressesListResponse = _mapper.Map<IList<AddressResponseDto>>(addresses);
+            var addressesListResponse = _mapper.Map<List<AddressResponseDto>>(addresses);
             return addressesListResponse;
         }
     }

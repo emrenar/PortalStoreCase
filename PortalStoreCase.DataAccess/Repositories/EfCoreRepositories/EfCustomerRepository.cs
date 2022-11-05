@@ -1,7 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using PortalStoreCase.DataAccess.Data;
 using PortalStoreCase.DataAccess.Repositories.GenericRepositories;
 using PortalStoreCase.DataAccess.Repositories.IRepositories;
+using PortalStoreCase.Entities.DTOs.RequestDtos;
 using PortalStoreCase.Entities.Entities;
 using System;
 using System.Collections.Generic;
@@ -13,8 +15,10 @@ namespace PortalStoreCase.DataAccess.Repositories.EfCoreRepositories
 {
     public class EfCustomerRepository : GenericRepository<Customer>, ICustomerRepository
     {
-        public EfCustomerRepository(PortalDbContext context) : base(context)
+        private readonly IMapper _mapper;
+        public EfCustomerRepository(PortalDbContext context, IMapper mapper) : base(context)
         {
+            _mapper = mapper;
         }
 
         public async Task<List<Customer>> GetAllActiveCustomerAsync()

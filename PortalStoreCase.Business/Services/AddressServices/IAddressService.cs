@@ -10,9 +10,9 @@ namespace PortalStoreCase.Business.Services.AddressServices
 {
     public interface IAddressService
     {
-        Task<IList<AddressResponseDto>> GetAllActiveAddressesAsync();
+        Task<List<AddressResponseDto>> GetAllActiveAddressesAsync();
         Task ChangeRecordStatusAsync(int id);
-        Task AddAddressAsync(AddressRequestDto addressRequestDto);
+        Task AddAddressAsync(AddressPostDto addressPostDto);
         Task ChangeAddressAsync(AddressRequestDto addressRequestDto);
     }
 }

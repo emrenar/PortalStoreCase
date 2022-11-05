@@ -36,10 +36,10 @@ namespace PortalStoreCase.Business.Services.CategoryServices
             _repository.SaveAsync();
         }
 
-        public async Task<IList<CategoryResponseDto>> GetAllActiveCategoryAsync()
+        public async Task<List<CategoryResponseDto>> GetAllActiveCategoryAsync()
         {
             var categories = await _repository.GetAllActiveCategoryAsync();
-            var categoriesListResponse = _mapper.Map<IList<CategoryResponseDto>>(categories);
+            var categoriesListResponse = _mapper.Map<List<CategoryResponseDto>>(categories);
             return categoriesListResponse;
         }
 
